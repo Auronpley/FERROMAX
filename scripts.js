@@ -2,7 +2,7 @@
 let productos = [];
 let empleados = {
     3004106: "Juan Jose Mejia",
-    3004110: "Maria Perez",
+    3004110: "Marco Tulio Lopex XD",
     3004115: "Carlos Lopez",
 };
 
