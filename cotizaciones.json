@@ -1,0 +1,263 @@
+{
+  "cotizaciones": [
+    {
+      "numeroPedido": "IPL00001",
+      "cliente": "Pedro Luis Roque",
+      "codigoEmpleado": "3004106",
+      "nombreEmpleado": "Juan Jose Mejia",
+      "productos": [
+        {
+          "cantidad": 11,
+          "codigo": "1200087",
+          "descripcion": "MAXALUM E25, OND, LISA",
+          "longitud": 4.8,
+          "precioUnitario": 58.88,
+          "descuento": 3,
+          "total": 3015.6
+        }
+      ],
+      "totalGeneral": 3108.86,
+      "descuentoTotal": 93.27,
+      "totalConDescuento": 3015.6
+    },
+    {
+      "cotizaciones": [
+        {
+          "numeroPedido": "IPL00001",
+          "cliente": "Pedro Luis Roque",
+          "codigoEmpleado": "3004106",
+          "nombreEmpleado": "Juan Jose Mejia",
+          "productos": [
+            {
+              "cantidad": 11,
+              "codigo": "1200087",
+              "descripcion": "MAXALUM E25, OND, LISA",
+              "longitud": 4.8,
+              "precioUnitario": 58.88,
+              "descuento": 3,
+              "total": 3015.6
+            }
+          ],
+          "totalGeneral": 3108.86,
+          "descuentoTotal": 93.27,
+          "totalConDescuento": 3015.6
+        },
+        {
+          "numeroPedido": "IPL00002",
+          "cliente": "Maria Esperanza Roque",
+          "codigoEmpleado": "3004106",
+          "nombreEmpleado": "Juan Jose Mejia",
+          "productos": [
+            {
+              "cantidad": 11,
+              "codigo": "1200087",
+              "descripcion": "MAXALUM E25, OND, LISA",
+              "longitud": 4.8,
+              "precioUnitario": 58.88,
+              "descuento": 3,
+              "total": 3015.6
+            },
+            {
+              "cantidad": 30,
+              "codigo": "30146",
+              "descripcion": "POLIN GHT 16(1.00MM) G72 3 X 2",
+              "longitud": 1,
+              "precioUnitario": 154.41,
+              "descuento": 3,
+              "total": 4493.33
+            }
+          ],
+          "totalGeneral": 7741.16,
+          "descuentoTotal": 232.23,
+          "totalConDescuento": 7508.93
+        }
+      ]
+    },
+    {
+      "cotizaciones": [
+        {
+          "numeroPedido": "IPL00001",
+          "cliente": "Pedro Luis Roque",
+          "codigoEmpleado": "3004106",
+          "nombreEmpleado": "Juan Jose Mejia",
+          "productos": [
+            {
+              "cantidad": 11,
+              "codigo": "1200087",
+              "descripcion": "MAXALUM E25, OND, LISA",
+              "longitud": 4.8,
+              "precioUnitario": 58.88,
+              "descuento": 3,
+              "total": 3015.6
+            }
+          ],
+          "totalGeneral": 3108.86,
+          "descuentoTotal": 93.27,
+          "totalConDescuento": 3015.6
+        },
+        {
+          "cotizaciones": [
+            {
+              "numeroPedido": "IPL00001",
+              "cliente": "Pedro Luis Roque",
+              "codigoEmpleado": "3004106",
+              "nombreEmpleado": "Juan Jose Mejia",
+              "productos": [
+                {
+                  "cantidad": 11,
+                  "codigo": "1200087",
+                  "descripcion": "MAXALUM E25, OND, LISA",
+                  "longitud": 4.8,
+                  "precioUnitario": 58.88,
+                  "descuento": 3,
+                  "total": 3015.6
+                }
+              ],
+              "totalGeneral": 3108.86,
+              "descuentoTotal": 93.27,
+              "totalConDescuento": 3015.6
+            },
+            {
+              "numeroPedido": "IPL00002",
+              "cliente": "Maria Esperanza Roque",
+              "codigoEmpleado": "3004106",
+              "nombreEmpleado": "Juan Jose Mejia",
+              "productos": [
+                {
+                  "cantidad": 11,
+                  "codigo": "1200087",
+                  "descripcion": "MAXALUM E25, OND, LISA",
+                  "longitud": 4.8,
+                  "precioUnitario": 58.88,
+                  "descuento": 3,
+                  "total": 3015.6
+                },
+                {
+                  "cantidad": 30,
+                  "codigo": "30146",
+                  "descripcion": "POLIN GHT 16(1.00MM) G72 3 X 2",
+                  "longitud": 1,
+                  "precioUnitario": 154.41,
+                  "descuento": 3,
+                  "total": 4493.33
+                }
+              ],
+              "totalGeneral": 7741.16,
+              "descuentoTotal": 232.23,
+              "totalConDescuento": 7508.93
+            }
+          ]
+        },
+        {
+          "numeroPedido": "IPL00003",
+          "cliente": "Pedro Luis Roque Ramos Razsas",
+          "codigoEmpleado": "3004106",
+          "nombreEmpleado": "Juan Jose Mejia",
+          "productos": [
+            {
+              "cantidad": 10,
+              "codigo": "40637",
+              "descripcion": "TORNILLO AUTR A PLUS(A+) 5/16X2''",
+              "longitud": 1,
+              "precioUnitario": 1.1,
+              "descuento": 3,
+              "total": 10.67
+            }
+          ],
+          "totalGeneral": 11,
+          "descuentoTotal": 0.33,
+          "totalConDescuento": 10.67
+        }
+      ]
+    },
+    {
+      "numeroPedido": "IPL00004",
+      "cliente": "Jose Carlos Manuel",
+      "codigoEmpleado": "3004106",
+      "nombreEmpleado": "Juan Jose Mejia",
+      "productos": [
+        {
+          "cantidad": 11,
+          "codigo": "1200086",
+          "descripcion": "MAXALUM E25, OND, LISA",
+          "longitud": 4.8,
+          "precioUnitario": 46.08,
+          "descuento": 3,
+          "total": 2360.03
+        }
+      ],
+      "totalGeneral": 2433.02,
+      "descuentoTotal": 72.99,
+      "totalConDescuento": 2360.03
+    },
+    {
+      "numeroPedido": "IPL00005",
+      "cliente": "Jorge Estuardo",
+      "codigoEmpleado": "3004110",
+      "nombreEmpleado": "Maria Perez",
+      "productos": [],
+      "totalGeneral": 2.2,
+      "descuentoTotal": 0.07,
+      "totalConDescuento": 2.13
+    },
+    {
+      "numeroPedido": "IPL00006",
+      "cliente": "Jose Carlos Manuel Ceron",
+      "codigoEmpleado": "3004106",
+      "nombreEmpleado": "Juan Jose Mejia",
+      "productos": [],
+      "totalGeneral": 22,
+      "descuentoTotal": 0.66,
+      "totalConDescuento": 21.34
+    },
+    {
+      "numeroPedido": "IPL00007",
+      "cliente": "Nueva Prueba",
+      "codigoEmpleado": "3004106",
+      "nombreEmpleado": "Juan Jose Mejia",
+      "productos": [
+        {
+          "cantidad": 200,
+          "codigo": "40637",
+          "descripcion": "TORNILLO AUTR A PLUS(A+) 5/16X2''",
+          "longitud": 1,
+          "precioUnitario": 1.1,
+          "descuento": 3,
+          "total": 213.4
+        }
+      ],
+      "totalGeneral": 220,
+      "descuentoTotal": 6.6,
+      "totalConDescuento": 213.4
+    },
+    {
+      "numeroPedido": "IPL00008",
+      "cliente": "Probando",
+      "codigoEmpleado": "3004110",
+      "nombreEmpleado": "Maria Perez",
+      "productos": [
+        {
+          "cantidad": 10,
+          "codigo": "1200022",
+          "descripcion": "ARQUITEJA ROJO MDA 0.55",
+          "longitud": 3.66,
+          "precioUnitario": 128.37,
+          "descuento": 3,
+          "total": 4557.39
+        },
+        {
+          "cantidad": 10,
+          "codigo": "1200699",
+          "descripcion": "POLIN GHT 16(1.00MM) G72 3 X 2 MDA",
+          "longitud": 11,
+          "precioUnitario": 25.74,
+          "descuento": 3,
+          "total": 2746.46
+        }
+      ],
+      "totalGeneral": 7529.74,
+      "descuentoTotal": 225.89,
+      "totalConDescuento": 7303.85
+    }
+  ]
+}

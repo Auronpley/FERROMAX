@@ -1,0 +1,14 @@
+{
+  "name": "cotizador",
+  "version": "1.0.0",
+  "description": "Cotizador en línea",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "jspdf": "^3.0.1",
+    "node-fetch": "^3.3.2"
+  }
+}

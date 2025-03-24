@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotizador Ferromax</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            padding: 15px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .buscador-cotizaciones {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        input[type="text"] {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin: 5px 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin: 5px;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #2c3e50;
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #f9f9f9;
+        }
+
+        .total {
+            font-weight: bold;
+            text-align: right;
+        }
+
+        .guardar-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        #agregar-producto-btn {
+            background-color: #27ae60;
+        }
+
+        #agregar-producto-btn:hover {
+            background-color: #219a52;
+        }
+
+        #guardar-cotizacion-btn {
+            background-color: #e74c3c;
+        }
+
+        #guardar-cotizacion-btn:hover {
+            background-color: #c0392b;
+        }
+
+        #nombre-empleado {
+            display: block;
+            margin: 5px 0;
+            color: #666;
+        }
+
+        #mensaje-busqueda {
+            display: block;
+            margin-top: 10px;
+            color: #666;
+        }
+
+        .cotizacion-grid {
+            width: 100%;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .productos-container {
+            display: grid;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .producto-block {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 15px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .campo-grupo {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .campo-label {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 0.9em;
+        }
+
+        .campo-input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        .producto-detalles {
+            grid-column: 1 / -1;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 10px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+
+        .totales-container {
+            border-top: 2px solid #eee;
+            padding-top: 20px;
+            margin-top: 20px;
+        }
+
+        .total-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            font-size: 1.1em;
+        }
+
+        .total-label {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .total-value {
+            color: #27ae60;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>COTIZADOR FERROMAX</h1>
+
+    <!-- Buscador de cotizaciones -->
+    <div class="buscador-cotizaciones">
+        <label for="buscar-cotizacion">Buscar Cotización:</label>
+        <input type="text" id="buscar-cotizacion" placeholder="Ingrese el número de pedido (ej: IPL00001)">
+        <button id="buscar-cotizacion-btn">Buscar</button>
+        <span id="mensaje-busqueda"></span>
+    </div>
+
+    <!-- Campos de cliente y empleado -->
+    <label for="cliente">Nombre del Cliente:</label>
+    <input type="text" id="cliente" placeholder="Ingrese el nombre del cliente">
+
+    <label for="codigo-empleado">Código de Empleado:</label>
+    <input type="text" id="codigo-empleado" placeholder="Ingrese el código del empleado">
+    <span id="nombre-empleado"></span>
+
+    <!-- Tabla de cotización -->
+    <div id="cotizacion" class="cotizacion-grid">
+            <div class="productos-container"></div>
+            <div class="totales-container">
+                <div class="total-row">
+                    <span class="total-label">Total General:</span>
+                    <span id="total-general" class="total-value">0.00</span>
+                </div>
+                <div class="total-row">
+                    <span class="total-label">Descuento Total:</span>
+                    <span id="descuento-total" class="total-value">0.00</span>
+                </div>
+                <div class="total-row">
+                    <span class="total-label">Total con Descuento:</span>
+                    <span id="total-con-descuento" class="total-value">0.00</span>
+                </div>
+            </div>
+        </div>
+
+    <!-- Botones de acciones -->
+    <button id="agregar-producto-btn">Agregar Producto</button>
+
+    <div class="guardar-container">
+        <button id="guardar-cotizacion-btn">Guardar Cotización</button>
+        <button id="exportar-pdf-btn">Exportar a PDF</button>
+        <button id="exportar-imagen-btn">Exportar a Imagen</button>
+    </div>
+
+    <!-- Librerías para exportar -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.24/jspdf.plugin.autotable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
+    <!-- Enlaza tu archivo JavaScript -->
+    <script src="scripts.js"></script>
+</body>
+</html>
