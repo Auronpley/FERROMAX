@@ -1,9 +1,13 @@
 // Global variables and data
 let productos = [];
 let empleados = {
-    3004106: "Juan Jose Mejia",
-    3004110: "Marco Tulio Lopex XD",
-    3004115: "Carlos Lopez",
+    3004106: "Juan José Mejía                                               Número del RDV: 4562-4277",
+    3003613: "Felipe García                                                 Número del RDV: 4562-4277",
+    3002387: "Marco Morales                                                 Número del RDV: 4562-4277",
+    3003727: "Estuardo Salazar                                              Número del RDV: 4562-4277",
+    3003797: "Edgar Soto                                                    Número del RDV: 4562-4277",
+    3003915: "Gerardo Alonzo                                                Número del RDV: 4562-4277",
+    3001180: "Jhonny Beiker                                                 Número del RDV: 4562-4277",
 };
 
 let codigosManuales = {
@@ -601,7 +605,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     40,
                 );
                 doc.text(
-                    `Empleado: ${document.getElementById("nombre-empleado").textContent}`,
+                    `Nombre del RDV: ${document.getElementById("nombre-empleado").textContent}`,
                     10,
                     50,
                 );
@@ -642,7 +646,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 const finalY = doc.autoTable.previous.finalY + 10;
                 doc.setFontSize(12);
-                doc.setFillColor(240, 240, 240);
                 doc.rect(10, finalY, 190, 30, "F");
                 doc.setTextColor(0, 0, 0);
                 doc.setFont("helvetica", "bold");
